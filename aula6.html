@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos DOM</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: blueviolet;
+    }
+    div{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      color: #fff;
+      text-align: center;
+    }
+    p{
+      background-color: green;
+      width: 200px;
+      height: 200px;
+      font: normal 21px/200px arial;
+      border-radius: 10px;
+    }
+    span{
+      width: 300px;
+      background-color: black;
+      position: absolute;
+      top: 200px;
+      font: normal 21px/70px arial;
+      display: none;
+    }
+    span::before{
+      content: '';
+      width: 0;
+      height: 0;
+      top: -40px;
+      left: 50%;
+      transform: translate(-50%,0);
+      border-right: 20px solid transparent;
+      border-top: 20px solid transparent;
+      border-left: 20px solid transparent;
+      border-bottom: 20px solid #000;
+      position: absolute;
+    }
+    ul{
+      list-style-type: none;
+    }
+    a{
+      text-decoration: none;
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    a:hover{
+      background-color: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Interaja...</p>
+    <span>A Cor do Fundo é Verde!
+      <ul>
+        <li><a href="https://www.google.com/">Google</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+      </ul>
+    </span>
+  </div>
+  <script>
+    var p = document.getElementsByTagName('p')[0]
+    var span = document.getElementsByTagName('span')[0]
+    p.addEventListener('click', clicar)
+    p.addEventListener('mouseenter', entrar)
+    p.addEventListener('mouseout', sair)
+
+    function clicar() {
+      p.innerText = 'Você Clicou!'
+      p.style.background = '#005f80'
+      if (span.style.display === 'none') {
+        span.style.display = 'initial'
+        span.style.boxShadow = '10px 10px 10px rgba(0, 0, 0, 0.349)'
+        p.style.boxShadow = '10px 10px 10px rgba(0, 0, 0, 0.349)'
+      }else{
+        span.style.display = 'none'
+        span.style.boxShadow = 'none'
+        p.style.boxShadow = 'none'
+      }
+    }
+
+    function entrar() {
+      p.innerText = 'Você entrou!'      
+    }
+
+    function sair() {
+      p.innerText = 'Você Saiu!'
+      p.style.background = '#008000'        
+    }
+
+  </script>
+</body>
+</html>

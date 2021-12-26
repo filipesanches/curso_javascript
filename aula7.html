@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filipe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root{
+      --corazul1: #0492c2;
+    }
+    html, body{
+      height: 100%;
+      background-color: #bbd2da4d;
+    }
+    body{
+      padding: 20px;
+      background:#0d1e30 ;
+    }
+    body,
+    fieldset{
+      display: flex;
+      flex-flow: column nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+    body div:first-child{
+      padding: 20px;
+      text-align: center;
+      font: bolder 30px Roboto;
+      border-radius: 20px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50px;
+      left: 30px;
+      width: 200px;
+      background-color: rgb(31, 67, 121);
+      height: 200px;
+      color: #fff;
+    }
+    form{
+      position: relative;
+      width: 500px;
+      background-color: rgba(255, 255, 255, 0.384);
+      border-radius: 0 0 10px 10px;
+      padding: 20px;
+    }
+    fieldset{
+      padding: 0 20px 20px 20px;
+      border: none;
+      position: relative;
+    }
+    legend{
+      font: 400 25px Roboto;
+      color: #fff;
+      border-radius: 10px 10px 0 0;
+      width: calc(100% + 100px);
+      bottom: calc(100% + 20px);
+      left: -50px;
+      padding: 30px;
+      position: absolute;
+      background-color: #0492c2;
+      text-align: center;
+    }
+    legend::before{
+      top: 100%;
+      left: 0;
+      padding: 0;
+      content: '';
+      width: 0;
+      border-top: 20px solid #04526c;
+      border-right: 0px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 30px solid transparent;
+      position: absolute;
+    }
+    legend::after{
+      top: 100%;
+      right: 0;
+      padding: 0;
+      content: '';
+      width: 0;
+      border-top: 20px solid #04526c;
+      border-right: 30px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 0px solid transparent;
+      position: absolute;
+    }
+    div:last-child{
+      display: block;
+      padding: 30px;
+      overflow: hidden;
+    }
+    div{
+      margin-top: 10px;
+      position: relative;
+      width: 100%;
+    }
+    input{
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      font: normal 20px Roboto;
+      margin-top: 25px;
+      width: 100%;
+      display: block;
+      padding: 20px;
+    }
+    label{
+      font: normal 20px Roboto;
+      position: absolute;
+      top: 25px;
+      left: 20px;
+      transition: .5s ease;
+    }
+    input:focus ~ label,
+    input:valid ~ label{
+      border-radius: 5px;
+      padding: 7px;
+      background-color: #0492c2;
+      color: #fff;
+      top: -20px;
+      left: 20px;
+      font-size: 15px;
+    }
+    fieldset div span{
+      position: absolute;
+    }
+    div span:nth-child(1){
+      width: 100%;
+      height: 20px;
+      left: -100%;
+      bottom: 0;
+      background: linear-gradient(90deg, transparent, var(--corazul1));
+      animation: span1 2s linear infinite;
+    }
+    div span:nth-child(2){
+      width: 20px;
+      height: 100%;
+      right: 0;
+      bottom: -100%;
+      background: linear-gradient(360deg, transparent, var(--corazul1));
+      animation: span2 2s linear .5s infinite;
+    }
+    div span:nth-child(3){
+      width: 100%;
+      height: 20px;
+      right: -100%;
+      top: 0;
+      background: linear-gradient(270deg, transparent, var(--corazul1));
+      animation: span3 2s linear 1s infinite;
+    }
+    div span:nth-child(4){
+      width: 20px;
+      height: 100%;
+      left: 0;
+      top: -100%;
+      background: linear-gradient(180deg, transparent, var(--corazul1));
+      animation: span4 2s linear 1.5s infinite;
+    }    
+    @keyframes span1 {
+      0%{
+        left: -100%;
+      }
+      50%, 100%{
+        left: 100%;
+      }
+    }
+    @keyframes span2 {
+      0%{
+        bottom: -100%;
+      }
+      50%, 100%{
+        bottom: 100%;
+      }
+    }
+    @keyframes span3 {
+      0%{
+        right: -100%;
+      }
+      50%, 100%{
+        right: 100%;
+      }
+    }
+    @keyframes span4 {
+      0%{
+        top: -100%;
+      }
+      50%, 100%{
+        top: 100%;
+      }
+    }
+    @media screen and (max-width: 1100px) {
+      html,body{
+        height: auto;
+      }
+      form{
+        margin-top: 100px;
+        order: 1;
+      }
+      body div:first-child{
+        order: 2;
+        width: 100%;
+        margin-bottom: 100px;
+        position: initial;
+      }
+      
+    }
+    @media screen and (max-width: 800px) {
+      form{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+      fieldset{
+        padding: 10px;
+      }
+      fieldset div:last-child{
+        margin: 0;
+      }
+      legend{
+        width: calc(100% + 40px);
+        left: -20px;
+        border-radius: 30px 30px 0px 0px ;
+        bottom: 100%;
+      }
+      legend::before{
+        left: 0px;
+        top: 100%;
+        border-left: 20px solid transparent;
+      }
+      legend::after{
+        right: 0px;
+        top: 100%;
+        border-right: 20px solid transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <form action="">
+    <fieldset>
+      <legend>Calcular Idade</legend>
+      <div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div>
+        <input type="number" name="nmr1" id="nmr1" required="required">
+        <label for="nmr1">Insira o ano de nascimento</label>
+      </div>
+      <div>
+        <input type="number" name="nmr2" id="nmr2"  required="required">
+        <label for="nmr2">Insira o ano em que estamos</label>
+      </div>
+      <input type="button" value="Calcular" onclick="calcular()">
+      </div>
+    </fieldset>
+  </form>
+  <script>
+    function calcular() {
+      var n1 = window.document.getElementById('nmr1')
+      var n2 = window.document.getElementById('nmr2')
+      var res = window.document.getElementsByTagName('div')[0]
+      var nn1 = Number(n1.value)
+      var nn2 = Number(n2.value)
+      var s = nn2 - nn1
+      res.innerText = `Você tem ${s} anos.`
+    }
+  </script>
+</body>
+</html>

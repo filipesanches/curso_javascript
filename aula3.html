@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font: normal 50px arial;
+    }
+    body{
+      background-color: darkslateblue;
+    }
+    header{
+      text-align: center;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+    h1{
+      color: gold;
+      width: 300px;
+      background-color: rgb(29, 11, 63);
+      box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.534);
+    }
+    span{
+      display: block;
+      width: 300px;
+      font-size: 30px;
+      color: #ffffff;
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RETROLIPE <span>#FrontEndDeveloper</span></h1>
+  </header>
+  <script>1
+    var n1 = Number(window.prompt('Digite um numero'))
+    var n2 = Number(window.prompt('Digite outro numero'))
+    var soma = n1 + n2
+    window.alert(`A Soma é ${soma.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+  </script>
+</body>
+</html>

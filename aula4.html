@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS</title>
+</head>
+<body>
+  <input type="button" value="Clique me" onclick="teste()">
+  <script>
+
+    function teste() {
+    window.alert('Precisamos de alguns dados')
+    var nome = window.prompt('Qual seu nome?').toUpperCase()
+    var profissao = window.prompt('Qual sua profissão?').toUpperCase()
+    var confirma = window.confirm(`${nome} você trabalha com ${profissao}`)
+    document.write(`Nome: <strong>${nome}</strong><br/> Profissão: ${profissao}`)
+      
+    }
+
+
+  </script>
+</body>
+</html>

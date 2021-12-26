@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JS</title>
+  <style>
+    body{
+      background: rgb(28, 100, 168);
+      color: #fff;
+      font: normal 18pt Arial;
+    }
+    span{
+      background-color: black;
+      padding: 5px;
+      margin-top: 5px;
+      display: block;
+    }
+    div{
+      cursor: pointer;
+    }
+    .classeteste{
+      background-color: rgb(23, 46, 80);
+
+      padding: 50px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Aprendendo JavaScript</h2>
+    <p>Aqui vai o resultado</p>
+    <p>Eu estou aprendendo <strong>JS</strong></p>
+    <div onmouseover="getElementById('idteste').style.display = 'block'" onmouseout="getElementById('idteste').style.display = 'none'">Clique em mim</div>
+    <div id="idteste">Clique em mim</div>
+    <div class="classeteste"></div>
+  </header>
+
+
+  <script>
+    window.document.getElementById('idteste').style.display = 'none'
+    var teste = window.document.querySelector('div.classeteste')
+    teste.style.background = 'blue'
+    teste.innerText = 'rel'
+
+
+    var div1 = window.document.getElementsByTagName('div')[1]
+    div1.style.background = 'red'
+
+    window.document.getElementById('idteste').innerText = 'Eiusmod sunt laboris non incididunt labore nisi laborum est. Nostrud proident excepteur duis non amet enim mollit mollit consequat dolor nulla excepteur culpa. Irure commodo dolor culpa id irure laboris id tempor reprehenderit tempor Lorem. Pariatur cillum ullamco aliqua excepteur nostrud consectetur culpa deserunt excepteur ipsum. Lorem laborum ea minim magna sit enim ullamco quis in culpa veniam est id. Eu quis ut sit Lorem do duis labore incididunt voluptate.'
+  </script>
+</body>
+</html>
