@@ -267,11 +267,12 @@
         <input type="number" name="nmr2" id="nmr2"  required="required">
         <label for="nmr2">Insira o ano em que estamos</label>
       </div>
-      <input type="button" value="Calcular" onclick="calcular()">
+      <input type="button" value="Calcular" ">
       </div>
     </fieldset>
   </form>
   <script>
+    window.document.getElementsByTagName('input')[2].addEventListener('click', calcular)
     function calcular() {
       var n1 = window.document.getElementById('nmr1')
       var n2 = window.document.getElementById('nmr2')
