@@ -169,7 +169,11 @@
       top: -100%;
       background: linear-gradient(180deg, transparent, var(--corazul1));
       animation: span4 2s linear 1.5s infinite;
-    }    
+    }/*
+    input:last-child{
+      color: #fff;
+      background-color: #0492c2;
+    }  */
     @keyframes span1 {
       0%{
         left: -100%;
@@ -201,6 +205,14 @@
       50%, 100%{
         top: 100%;
       }
+    }
+    .bac{
+      background-color: #0492c2;
+      color: #fff;
+    }
+    .bac1{
+      background-color: #fff;
+      color: #0492c2;
     }
     @media screen and (max-width: 1100px) {
       html,body{
@@ -260,11 +272,11 @@
       <span></span>
       <span></span>
       <div>
-        <input type="number" name="nmr1" id="nmr1" required="required">
+        <input type="number" name="nmr1" id="nmr1" required="required" value="1992">
         <label for="nmr1">Insira o ano de nascimento</label>
       </div>
       <div>
-        <input type="number" name="nmr2" id="nmr2"  required="required">
+        <input type="number" name="nmr2" id="nmr2"  required="required" value="2021">
         <label for="nmr2">Insira o ano em que estamos</label>
       </div>
       <input type="button" value="Calcular">
@@ -272,7 +284,9 @@
     </fieldset>
   </form>
   <script>
-    window.document.getElementsByTagName('input')[2].addEventListener('click', calcular)
+    var btn = window.document.getElementsByTagName('input')[2]
+    btn.addEventListener('click', calcular)
+    btn.click(btn)
     function calcular() {
       var n1 = window.document.getElementById('nmr1')
       var n2 = window.document.getElementById('nmr2')
