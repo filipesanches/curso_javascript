@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio</title>
+  
+</head>
+<body>
+  <h1>Verificar Nacionalidade</h1>
+  <input type="text" name="local" id="local" placeholder="Digite o pais onde reside">
+  <button type="submit">Verificar</button>
+  <h2>Ultima Verificação</h2>
+  <p></p>
+
+  <script>
+    var local = document.querySelector('input#local')
+    var btn = document.getElementsByTagName('button')
+    var par = document.getElementsByTagName('p')
+    btn[0].addEventListener('click', teste)
+    if (local.value == '') {
+      par[0].innerText = 'Faça uma pesquisa'      
+    }
+    function teste() {
+      if (local.value == 'Brasil') {
+        alert(`Pais: ${local.value}\nVocê é Brasileiro`)
+        par[0].innerHTML = `<strong>${local.value}</strong><br>Brasileiro`
+      } else {
+        alert(`Pais: ${local.value}\nVocê é Estrangeiro`)
+        par[0].innerHTML = `<strong>${local.value}</strong><br>Estrangeiro`
+      }
+      
+      local.value = ''
+    }
+  </script>
+</body>
+</html>
