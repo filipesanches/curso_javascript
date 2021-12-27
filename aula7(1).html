@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>teste</title>
+  <style>
+    input{
+      display: block;
+    }
+    span{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <input type="email" name="email" id="email" required>
+    <span></span>
+    <input type="password" name="senha" id="senha" required>
+    <span></span>
+    <button type="submit">Entrar</button>
+  </form>
+  <script>
+    var inputs = document.getElementsByTagName('input')
+    var botao = document.getElementsByTagName('button')
+    var spans = document.getElementsByTagName('span')
+    botao[0].addEventListener('click', obg)
+    function obg(){
+        if(inputs[0].value == '' || inputs[0].value.indexOf('@', 0) == -1 || inputs[0].value.indexOf('.', 0) == -1){
+        spans[0].innerText = 'obrigatorio'
+        }else{
+        spans[0].innerText = 'ok'
+        }
+
+        if(inputs[1].value == ''){
+        spans[1].innerText = 'obrigatorio'
+        }else{
+        spans[1].innerText = 'ok'
+        }
+    }
+  </script>
+</body>
+</html>
