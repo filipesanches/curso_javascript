@@ -1,6 +1,6 @@
 :root{
   --px400: 400px;
-  --px200: 270px;
+  --px200: 300px;
 }
 *{
   box-sizing: border-box;
@@ -38,23 +38,24 @@ div{
   justify-content: space-evenly;
 }
 section > div{
-  max-width: var(--px400);
+  max-width: 600px;
   width: 100%;
-  height: var(--px400);
+  padding: 10px 5px 40px;
   background-color: black;
   border-radius: 10px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.534);
 }
 section div div:first-child{
   text-align: center;
-  padding: 20px 30px;
+  padding: 25px 30px;
   color: #fff;
 }
 section div + div{
-  width: var(--px200);
+  max-width: var(--px200);
+  width: 100%;
   height: var(--px200);
-  background: url(../img/manha.jpg) center/cover no-repeat;
-  border-radius: 50%;
+  background: center/cover no-repeat;
+  border-radius: 20px;
 }
 footer{
   padding: 20px 0;
