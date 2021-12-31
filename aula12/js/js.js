@@ -10,9 +10,11 @@ ver.addEventListener('click', function() {
     var res = document.getElementsByTagName('div')[1]
     var img = document.createElement('div')
     img.setAttribute('id', 'foto')
+    
     if (sexo[0].checked == false && sexo[1].checked == false){
       alert('Escolha o sexo')
     } else {
+      
       if (sexo[0].checked) {
         //Resultado para Homem
         if (Number(idade) >= 0 && Number(idade) < 13){

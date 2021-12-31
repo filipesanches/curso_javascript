@@ -1,5 +1,5 @@
 var agora = new Date()
-var diaSemana = 98//agora.getDay()
+var diaSemana = agora.getDay()
 var idade = 98
 var msg = [`Voce tem ${idade} anos.`, `Campo idade obrigatorio`]
 
