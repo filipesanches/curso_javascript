@@ -1,5 +1,39 @@
+:root{
+  --branco: rgb(255, 255, 255);
+  --preto: rgb(0, 0, 0);
+  --cor2: rgba(53, 99, 185, 0.774);
+
+}
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body{
+  background: var(--cor2);
+  font: normal 15pt Verdana;
+}
+
+header{
+  color: var(--branco);
+  text-align: center;
+}
+
+section{
+  margin: auto;
+  background: var(--branco);
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 5px 5px 5px var(--preto);
+}
+section div{
+  padding: 10px;
+}
+footer{
+  color: var(--branco);
+  text-align: center;
+  font-style: italic;
+  padding: 10px 0;
 }

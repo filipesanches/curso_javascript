@@ -1,0 +1,1 @@
+document.onload = console.log('Hello word!\nTomaz no cú k k k k')
