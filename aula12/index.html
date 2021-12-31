@@ -9,14 +9,27 @@
 </head>
 <body>
   <header>
-    <h1>Título</h1>
+    <h1>Verificado de idade</h1>
   </header><!--end header-->
   <section>
-    <div>Testando...</div>
-    <div>Olá.</div>
+    <div>
+      <p>
+        <input type="number" name="anonasc" id="anonasc" required>
+        <label for="anonasc">Ano de nascimento:</label>
+      </p>
+      <p>Sexo:
+        <input type="radio" name="sexo" id="mas" value="Masculino">
+        <label for="mas">Masculino</label>
+        <input type="radio" name="sexo" id="fem" value="Feminino">
+        <label for="fem">Feminino</label>
+      </p>
+      <p>
+        <input type="button" value="Verificar">
+      </p>
+    </div>
+    <div></div>
   </section><!--end section-->
   <footer>
-    teste
     <p>&copy; Retrolipe</p>
   </footer><!--end footer-->
   <script src="js/js.js">
