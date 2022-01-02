@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>teste aula 16</title>
+</head>
+<body>
+  <ul></ul>
+  <p>
+    <input type="text" name="vaga" id="vaga">
+    <button>Procurar</button>
+  </p>
+  <p>
+    <input type="text" name="inserir" id="inserir">
+    <button>Inserir</button>
+  </p>
+  <p></p>
+  <script>
+
+    let procura = document.querySelector('input#vaga')
+    let ul = document.querySelector('ul')
+    let vagas = ['fusca','gol','palio','celta','voyage']
+    //vagas.push('tipo')
+    vagas.sort()
+  
+    for (let pos = 0; pos < vagas.length; pos++) {
+      let lista = document.createElement('li')
+      lista.innerText = `Vaga ${pos}, guarda o carro ${vagas[pos]}`
+      ul.appendChild(lista)
+    }
+    document.getElementsByTagName('button')[0].addEventListener("click", function(){
+      let procuraCarro = vagas.indexOf(procura.value)
+      if (procuraCarro <= -1) {
+        alert('erro')        
+      } else {
+        document.getElementsByTagName('p')[2].innerText = `O ${vagas[procuraCarro]}, Está na vaga ${procuraCarro}`
+      }
+    })
+
+
+    
+    let inserir = document.getElementById('inserir')
+    document.getElementsByTagName('button')[1].addEventListener('click', function(){
+      vagas.push(inserir.value)
+      let list = document.createElement('li')
+      list.innerHTML += `Vaga ${vagas.length}, guarda o carro ${vagas[inserir.value.length]}`
+      ul.appendChild(list)
+    }
+    )
+  </script>
+</body>
+</html>
