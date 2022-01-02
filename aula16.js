@@ -1,10 +1,15 @@
 let vagas = ['fusca','gol','palio','celta','voyage']
 vagas.push('tipo')
 vagas.sort()
+/*
 for (let pos = 0; pos < vagas.length; pos++) {
   console.log(`Vaga ${pos}, guarda o carro ${vagas[pos]}`)  
 }
-let procuraCarro = vagas.indexOf('celta')
+*/
+for(let pos in vagas){
+  console.log(`Vaga ${pos}, guarda o carro ${vagas[pos]}`)  
+}
+let procuraCarro = vagas.indexOf('voyage')
 if(procuraCarro <= -1){
   console.log('erro')
 }else{
