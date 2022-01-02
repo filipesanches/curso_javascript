@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>teste</title>
+  <style>
+    html, body{
+      height: 100%;
+    }
+    span{
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      background-color: black;
+      height: 50px;
+      border-radius: 50%;
+      animation: teste .5s ease infinite;
+      pointer-events: none;
+    }
+    @keyframes teste {
+      0%{
+        opacity: 0.2;
+      }
+      100%{
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+
+  </div>
+  <script>
+    const doc = window.document.querySelector('body')
+    
+      doc.addEventListener('click', function(e){
+        let x = e.clientX - e.target.offsetLeft
+        let Y = e.clientY - e.target.offsetTop
+
+        let bolha = document.createElement('span')
+        bolha.style.left = x + 'px'
+        bolha.style.top = Y + 'px'
+
+        this.appendChild(bolha)
+
+        setTimeout(() => {
+          bolha.remove()
+        }, 300)
+
+    })
+ 
+  </script>
+</body>
+</html>

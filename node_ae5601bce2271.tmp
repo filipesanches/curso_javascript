@@ -1,4 +1,0 @@
-var b = 1
-while(b <= 1){
-  console.log(`Passo ${b}`)
-}
