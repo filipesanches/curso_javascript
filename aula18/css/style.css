@@ -1,0 +1,108 @@
+:root{
+  --branco: rgb(255, 255, 255);
+  --preto: rgb(0, 0, 0);
+  --cor2: rgba(53, 99, 185, 0.774);
+
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: var(--cor2);
+  font: normal 15pt arial;
+}
+
+header{
+  color: var(--branco);
+  text-align: center;
+  padding: 20px 0;
+}
+
+section{
+  margin: auto;
+  background: var(--branco);
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 5px 5px 5px var(--preto);
+  overflow: hidden;
+}
+section div{
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+
+section div:first-child p{
+  position: relative;
+}
+
+section div:first-child p input{
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 30px 0 0 0;
+}
+
+section div:first-child p input:focus, select:focus{
+  outline-offset: 1px;
+  outline: 1px solid var(--cor2);
+}
+
+select{
+  border-radius: 10px;
+  text-align: center;
+}
+
+section div:first-child p input:last-child:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+section div:first-child p input:last-child,
+section div:first-child p input:last-child:active{
+  border-color: #000;
+  outline: none;
+  background-color: black;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+section div:first-child p label{
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  transition: .5s ease;
+}
+
+section div:first-child p input:valid ~ label,
+section div:first-child p input:focus ~ label{
+  top: 5px;
+  left: 0;
+  font-size: 15px;
+}
+
+section div:last-child{
+  padding: 0 0 50px 0;
+}
+
+select{
+  width: 100%;
+  border-width: 5px;
+  padding: 10px;
+}
+option{
+  padding: 5px;
+}
+
+footer{
+  color: var(--branco);
+  text-align: center;
+  font-style: italic;
+  padding: 40px 0;
+}
